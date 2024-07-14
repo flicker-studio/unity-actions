@@ -13,7 +13,7 @@ async function execute(command, ignoreReturnCode) {
 async function execute_unity(unityPath, args) {
     let linux = '';
     let default_cli = '-batchmode -nographics -quit';
-    if (process.platform === 'linux') linux = 'xvfb-run --auto-servernum';
+   // if (process.platform === 'linux') linux = 'xvfb-run --auto-servernum';
     return await execute(`${linux} "${unityPath}" ${default_cli} ${args}`, true);
 }
 

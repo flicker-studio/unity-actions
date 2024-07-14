@@ -14,7 +14,7 @@ async function execute_unity(unityPath, args) {
     let linux = '';
     let default_cli = '-batchmode -nographics -quit';
    // if (process.platform === 'linux') linux = 'xvfb-run --auto-servernum';
-    return await execute(`${linux} "${unityPath}" ${default_cli} ${args}`, true);
+    return await exec.exec(`${linux} "${unityPath}" ${default_cli} ${args}`);
 }
 
 

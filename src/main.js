@@ -23,9 +23,7 @@ function activate_cli() {
         throw new Error('serial or license is not found !');
     }
 
-
     cli += ` -serial ${serial}`;
-
 
     return cli;
 }
@@ -45,9 +43,9 @@ async function activate() {
 
     const stdout = await execute_unity(unityPath, `${action_cli}`);
 
-    if (!stdout.includes('Next license update check is after')) {
+   // if (!stdout.includes('Next license update check is after')) {
         //  throw new Error('Activation failed');
-    }
+   // }
 }
 
 async function run() {
